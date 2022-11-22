@@ -1,6 +1,6 @@
 # 目录说明  
 base:客户端基础库  
-car:车端主程序    
+car:车端主程序  
 common:客户端公用代码  
 driver:驾驶端  
 linux_install:linux打包程序  
@@ -83,7 +83,7 @@ car_bridge:车端桥接程序
     >\#给car_bridge赋予执行权限  
     >chmod 777 car_bridge    
     >\#文件"/etc/rc.local"中，在"exit 0"命令的上一行，输入命令"nohup [car_bridge全路径] >[日志全路径] 2>&1 &",以设置car_bridge程序自启动   
-    >vim ConfigCar.ini
+    >vim /etc/rc.local  
 
     注:理论上，car_bridge只要能和ros进行通信，能和car连接，部署到任何位置都可以，包括部署到其他机器  
 1. 驾驶端程序部署  
