@@ -153,16 +153,17 @@ void TaskPump::OnPushVideoMessageIncoming(MediaMessage mediaMessage, const QStri
                         listener,
                         m_config->m_videoWidth,
                         m_config->m_videoHeight,
-                        m_config->m_frameRate);}
-        log_info << "MediaMessage::OpenFail:data=" << data.toStdString() << std::endl;
-        if(m_pushVideo)
-        {
-            emit DataOut(data);
-        }
-        else
-        {
-            m_camsListeners.clear();
-            break;
+                        m_config->m_frameRate);
+            log_info << "MediaMessage::OpenFail:data=" << data.toStdString() << std::endl;
+            if(m_pushVideo)
+            {
+                emit DataOut(data);
+            }
+            else
+            {
+                m_camsListeners.clear();
+                break;
+            }
         }
     }
         break;
