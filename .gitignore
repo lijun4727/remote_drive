@@ -22,3 +22,4 @@ build-app-Desktop_Qt_6_*_64bit-*
 /go_server/car_bridge/car_bridge
 /app/driver/res/*.aps
 /app/windows_install/setup.iss.bak
+go_server/logistics/logistics
